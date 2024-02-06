@@ -44,7 +44,9 @@ public class DeudaAdapter extends RecyclerView.Adapter<DeudaAdapter.DeudaVH> {
     public void onBindViewHolder(@NonNull DeudaVH holder, int position) {
         Deuda d = objects.get(position);
         holder.lbNombre.setText(d.getNombre());
-        holder.lbCantidad.setText((int)d.getCantidad());
+      //  holder.lbCantidad.setText(Integer.parseInt(String.valueOf(d.getCantidad())));
+//        holder.lbCantidad.setText((int) Float.parseFloat(String.valueOf(d.getCantidad())));
+    holder.lbCantidad.setText((int) d.getCantidad());
         holder.lbMotivo.setText(d.getMotivo());
 
     }
